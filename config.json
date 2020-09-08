@@ -1,0 +1,4 @@
+{
+    "connectionString": "mongodb://localhost:27017/mynotes",
+    "secret": "HFdkfdggghgdshdgGFdhfdjH83264386Jfghdfd9"
+}
