@@ -27,27 +27,27 @@ function addNotes(req, res, next){
 	console.log("addNotes in the Controller");
 	userService.addNotes(req.body, function(result){
 		console.log("result"+result)
-		res.json({ "message":"Success", "status": "Notes has been added Successfully" })
-	})
-}
+		res.json({ "message":"Success", "status": "Notes has been added Successfully" });
+	});
+};
 
 // 2.getNotes
 function getNotes(req, res, next) {
     console.log("get the notes in Controller");
     userService.getNotes(req.body, function(result){
-      console.log("result"+result)
-      res.json({"status":"Notes details","records":result})
-    })
+      console.log("result"+result);
+      res.json({"status":"Notes details","records":result});
+    });
 
-}
+};
 // 3.getNotesById
 function getNotesById(req, res, next) {
     console.log("get the notes by individual id in Controller");
     userService.getNotesById(req.body, function(result){
-      console.log("result"+result)
-      res.json({"status":"Notes details by individual id","records":result})
-    })
-}
+      console.log("result"+result);
+      res.json({"status":"Notes details by individual id","records":result});
+    });
+};
 
 // 4.updateNotes
 function updateNotes(req, res, next){
@@ -56,8 +56,8 @@ function updateNotes(req, res, next){
 		console.log("result"+result);
 		res.json({ "message": "Success", "status": "Notes has been updated", "records": result })
 
-	})
-}
+	});
+};
 
 // 5.deleteNotes
 function deleteNotes(req, res, next){
@@ -65,8 +65,8 @@ function deleteNotes(req, res, next){
 	userService.deleteNotes(req.body, function(result){
 		console.log("result"+result)
 		res.json({ "message": "Success", "status": "Notes has been deleted"})
-	})
-}
+	});
+};
 
 // addRemainders
 function addRemainder(req, res, next){
@@ -74,28 +74,28 @@ function addRemainder(req, res, next){
 	userService.addRemainder(req.body, function(result){
 		console.log('result'+result)
 		res.json({"message": "success", "status": "Remainder has been added"})
-	})
-}
+	});
+};
 // update  Remainder
 function updateRemainder(req, res, next){
 	console.log("Update the remainder")
 	userService.updateRemainder(req.body, function(result){
 		console.log('result'+result)
 		res.json({"message": "Updated sucessfully", "status": "Remainder has been updated", "records": result}) 
-	})
-}
+	});
+};
 // fetch myremainder
 function fetchRemainder(req, res, next){
 	console.log("Fetch the remainder")
 	userService.fetchRemainder(req.body, function(result){
 		console.log('results'+result)
 		res.json({"message": "fetched details", "records": result})
-	})
-}
+	});
+};
 // delete the remainder
 function deleteRemainder(req, res, next){
 	console.log("delete the remainder");
 	userService.deleteRemainder(req.body, function(result){
-		res.json({"message": "sucess", "status": "Remainder has been deleted"})
-	})
-}
+		res.json({"message": "sucess", "status": "Remainder has been deleted"});
+	});
+};

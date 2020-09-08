@@ -84,11 +84,6 @@ async function deleteNotes(req, callback){
 		callback("success")
 };
 
-// 6.Create the user
-async function Create(req, callback){
-	console.log("User in resgister profile");
-}
-
 // add remainder
 async function addRemainder(req, callback){
 	console.log("remainder in service");
@@ -96,8 +91,8 @@ async function addRemainder(req, callback){
 	const remain = new remainders(req);
 	remain.save().then((data) => {
 		callback(data)
-	})
-}
+	});
+};
 
 // update the remainder
 async function updateRemainder(req, callback){
@@ -108,20 +103,20 @@ async function updateRemainder(req, callback){
 	remainders.findByIdAndUpdate(condition, update, options).exec().then((result) =>{
 		console.log(result)
 		callback(result)
-	})
-}
+	});
+};
 // fetch the remainder
 async function fetchRemainder(req, callback){
 	console.log("fetch the remainders in service")
 	remainders.find(req).sort({"_id": -1}).exec(function(err, result){
 		if (err) throw (err)
 		callback(result)
-	})
-}
+	});
+};
 // delete remainder
 async function deleteRemainder(req, callback){
-	console.log("deleteRemainder in service")
+	console.log("deleteRemainder in service");
 	const condition  = req.id
-	await remainders.findByIdAndDelete(condition)
-	callback("sucess")
-}
+	await remainders.findByIdAndDelete(condition);
+	callback("sucess");
+};
