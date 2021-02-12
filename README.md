@@ -8,3 +8,7 @@ First install the needed package through
 then run the locally through the comment in terminal
 
 **nodejs app.js**
+
+The Database name is 
+
+**mynotes**
